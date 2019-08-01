@@ -1,6 +1,4 @@
-## Study Design
-
----
+# Study Design
 
 The source data for this analysis was collected from the UCI Machine Lerning Repository and is composed of experimetns conducted with 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
 
@@ -8,17 +6,13 @@ The data can be retrived from:
 <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
 
 
-## Variables
-
----
+# Variables
 
 All recorded data in the original set is normalized and bounded within [-1,1] range.
 
 The following datasets are produced by this analysis.
 
-### activity_subset
-
----
+## activity_subset
 
 The variables in this dataset are only an extract from the original dataset, and have been renamed for clarity.
 
@@ -61,9 +55,7 @@ bodyRotation_frequencySample_jerk_magnitude_mean|Mean of fast fourrier transform
 bodyRotation_frequencySample_jerk_magnitude_standardDeviation|Standard deviation of fast fourrier transform of body rotation jerk magnitude for a given time frame.|Renamed *fBodyBodyGyroJerkMag-std()* from the oiginal dataset.
 
 
-### activity_subset_averages
-
----
+## activity_subset_averages
 
 Each of the previous variables was grouped by activity and volunteer and the mean value calculated for all the time samples and frequency samples available.
 
@@ -74,6 +66,5 @@ The resulting dataset has the same variables, which have been renamed to reflect
 * *standardDeviation* was replaced by *meanStandardDeviation*.
 
 
-## Analysis
+# Analysis
 
----
