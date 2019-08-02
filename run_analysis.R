@@ -71,7 +71,7 @@ require(reshape2)
     names(activity_subset) <- activity_subset_names
     
     # Export subset to tab delimited file
-    write.table(activity_subset, file = "activity_subset.txt", sep = "\t")
+    write.table(activity_subset, file = "activity_subset.txt", row.names = FALSE)
     
     # Memory clean up
     rm(activity_dataset, activity_dataset_names, activity_subset_names)
@@ -91,7 +91,7 @@ require(reshape2)
     names(activity_subset_averages) <- activity_subset_averages_names
     
     # Export summary to tab delimited file
-    write.table(activity_subset_averages, file = "activity_subset_averages.txt", sep = "\t")
+    write.table(activity_subset_averages, file = "activity_subset_averages.txt", row.names = FALSE)
     
     # Memory clean up
     rm(activity_subset_averages_names)
