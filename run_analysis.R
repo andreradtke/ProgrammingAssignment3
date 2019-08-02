@@ -74,7 +74,7 @@ require(reshape2)
     write.table(activity_subset, file = "activity_subset.txt", sep = "\t")
     
     # Memory clean up
-    rm(activity_dataset, activity_dataset_names, activity_subset_names, select_subset)
+    rm(activity_dataset, activity_dataset_names, activity_subset_names)
     
     
 # 4. Summarize the subset and rename the variables accordingly
