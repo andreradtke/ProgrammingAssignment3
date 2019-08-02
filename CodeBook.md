@@ -8,7 +8,14 @@ The data can be retrived from:
 
 # Variables
 
-All recorded data in the original set is normalized and bounded within [-1,1] range.
+The variables in the source dataset are described as:
+>The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+>
+>Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+>
+>Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, >fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+All recorded data in the original set is normalized and bounded within [-1,1] range, and therefore have no unit.
 
 The following datasets are produced by this analysis.
 
@@ -54,17 +61,14 @@ bodyRotation_frequencySample_magnitude_standardDeviation|Standard deviation of f
 bodyRotation_frequencySample_jerk_magnitude_mean|Mean of fast fourrier transform of body rotation jerk magnitude for a given time frame.|Renamed *fBodyBodyGyroJerkMag-mean()* from the oiginal dataset.
 bodyRotation_frequencySample_jerk_magnitude_standardDeviation|Standard deviation of fast fourrier transform of body rotation jerk magnitude for a given time frame.|Renamed *fBodyBodyGyroJerkMag-std()* from the oiginal dataset.
 
-
 ## activity_subset_averages
 
-Each of the previous variables was grouped by activity and volunteer and the mean value calculated for all the time samples and frequency samples available.
-
-The resulting dataset has the same variables, which have been renamed to reflect the summarization that has been performed. The following naming convention was applied:
+This dataset contains the same variables as above, which have been summarized according to the analysis below. The following naming convention was applied to the *averages* dataset:
 
 * *timeSample* was replaced by *totalTime*.
 * *frequencySample* was replaced by *totalFrequency*.
 * *standardDeviation* was replaced by *meanStandardDeviation*.
 
-
 # Analysis
 
+Each of the variables in *activity_subset* was grouped by activity type and volunteer ID, and the mean value was calculated for all the time samples and frequency samples available.
