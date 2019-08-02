@@ -1,3 +1,7 @@
+# Description
+
+This repository contains the project files for the Programming Assignment of the Coursera Data Science Specialization course.
+
 # Steps to run analysis
 
 The following steps should be completed to run the analysis:
