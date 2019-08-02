@@ -53,7 +53,7 @@ require(reshape2)
     activity_subset_names <- activity_dataset_names[grep("mean\\(\\)|std\\(\\)", activity_dataset_names)]
     activity_subset_names <- c("activity", "subject_id", activity_subset_names)
     
-    activity_subset <- select(activity_dataset, one_of(activity_subset_names))
+    activity_subset <- activity_dataset %>% select(one_of(activity_subset_names))
     
     # Rename variables for better understanding
     activity_subset_names <- gsub("-mean\\(\\)", "_mean", activity_subset_names)
